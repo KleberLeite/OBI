@@ -23,3 +23,7 @@ path = "src/bin/2021/tennis_tournament.rs"
 [[bin]]
 name = "response_time"
 path = "src/bin/2021/response_time.rs"
+
+[[bin]]
+name = "deck"
+path = "src/bin/2021/deck.rs"
