@@ -1,9 +1,9 @@
 fn main() {
-    let amount = input::read_u8();
+    let amount = input::read_u32();
     let mut nums = Vec::new();
 
     for _ in 0..amount {
-        match input::read_u8() {
+        match input::read_u32() {
             0 => {
                 nums.pop();
             }
@@ -11,7 +11,7 @@ fn main() {
         }
     }
 
-    let sum: u8 = nums.iter().sum();
+    let sum: u32 = nums.iter().sum();
 
     println!("{sum}");
 }

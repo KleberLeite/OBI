@@ -8,6 +8,10 @@ pub fn read_u8() -> u8 {
     read().parse().unwrap()
 }
 
+pub fn read_u32() -> u32 {
+    read().parse().unwrap()
+}
+
 pub fn read_char() -> char {
     read().remove(0)
 }
