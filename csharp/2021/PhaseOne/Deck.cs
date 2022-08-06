@@ -18,7 +18,7 @@ public static class Deck
             var num = int.Parse(new String(c.Take(2).ToArray()));
             var naipe = c.Substring(2);
 
-            naipes[naipe].Repeat = !naipes[naipe].List.TryAdd(num, num);
+            naipes[naipe].TryAdd(num);
         }
 
         foreach (NaipeDeck naipe in naipes.Values)
@@ -28,27 +28,27 @@ public static class Deck
                 Console.WriteLine("erro");
                 continue;
             }
-            if (naipe.List.Count == 13)
+            if (naipe.Count == 13)
             {
                 Console.WriteLine("0");
                 continue;
             }
-            Console.WriteLine(13 - naipe.List.Count);
+            Console.WriteLine(13 - naipe.Count);
         }
     }
 
     private class NaipeDeck
     {
-        private bool repeat;
-        public bool Repeat
+        public bool Repeat { get; private set; }
+        public int Count => cards.Count;
+        private List<int> cards = new();
+
+        public void TryAdd(int card)
         {
-            get => repeat;
-            set
-            {
-                if (!repeat)
-                    repeat = value;
-            }
+            if (cards.Contains(card))
+                Repeat = true;
+            else
+                cards.Add(card);
         }
-        public SortedList<int, int> List = new();
     }
 }
