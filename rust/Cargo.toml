@@ -19,3 +19,7 @@ path = "src/bin/2021/zero_to_cancel.rs"
 [[bin]]
 name = "tennis_tournament"
 path = "src/bin/2021/tennis_tournament.rs"
+
+[[bin]]
+name = "response_time"
+path = "src/bin/2021/response_time.rs"
