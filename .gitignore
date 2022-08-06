@@ -1,0 +1,6 @@
+# .Net
+csharp/**/[Oo]bj
+csharp/**/[Bb]in
+
+# Rust
+rust/**/target
