@@ -11,3 +11,7 @@ edition = "2021"
 
 [lib]
 name = "input"
+
+[[bin]]
+name = "zero_to_cancel"
+path = "src/bin/2021/zero_to_cancel.rs"
