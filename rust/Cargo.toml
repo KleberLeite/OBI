@@ -31,3 +31,7 @@ path = "src/bin/2021/deck.rs"
 [[bin]]
 name = "tennis_doubles"
 path = "src/bin/2021/tennis_doubles.rs"
+
+[[bin]]
+name = "minmax"
+path = "src/bin/2021/minmax.rs"
