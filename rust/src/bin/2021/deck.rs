@@ -29,13 +29,12 @@ struct Deck {
 
 fn main() {
     let mut deck = Deck::default();
-    let data = input::read();
-    let mut idx = &data[..];
+    let mut data = &input::read()[..];
 
-    while !idx.is_empty() {
-        let card = idx[..2].parse::<u8>().unwrap();
+    while !data.is_empty() {
+        let card = data[..2].parse::<u8>().unwrap();
 
-        let naipe = match &idx[2..3] {
+        let naipe = match &data[2..3] {
             "P" => &mut deck.clubs,
             "U" => &mut deck.diamonds,
             "C" => &mut deck.hearts,
@@ -47,7 +46,7 @@ fn main() {
             naipe.repeated = !naipe.cards.insert(card);
         }
 
-        idx = &idx[3..];
+        data = &data[3..];
     }
 
     let Deck {
