@@ -2,30 +2,27 @@ fn main() {
     let value = input::read_u16();
     let range = input::read_u16()..=input::read_u16();
 
-    let mut min = None;
-    let mut max = 0;
+    let (mut min, mut max) = (0, 0);
 
     for num in range {
-        let sum = sum_digits(num);
-
-        if sum == value {
-            if min.is_none() {
-                min = Some(num);
+        if sum_digits(num) == value {
+            if min == 0 {
+                min = num;
             }
 
             max = num;
         }
     }
 
-    println!("{}\n{max}", min.unwrap());
+    println!("{min}\n{max}");
 }
 
 fn sum_digits(mut num: u16) -> u16 {
-    let mut sum = 0;
+    let mut sum = num % 10;
 
-    while num != 0 {
-        sum += num % 10;
+    while num > 0 {
         num /= 10;
+        sum += num % 10;
     }
 
     sum
