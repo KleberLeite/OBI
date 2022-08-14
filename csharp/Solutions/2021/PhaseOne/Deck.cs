@@ -1,4 +1,5 @@
 
+namespace Solutions.Y2021.PhaseOne;
 public static class Deck
 {
     public static void Resolve()

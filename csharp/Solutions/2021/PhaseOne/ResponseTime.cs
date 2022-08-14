@@ -1,4 +1,5 @@
 
+namespace Solutions.Y2021.PhaseOne;
 public static class ResponseTime
 {
     public static void Resolve()
