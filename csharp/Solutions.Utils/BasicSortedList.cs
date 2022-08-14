@@ -39,12 +39,21 @@ public class BasicSortedList<T>
                 data.Sort(comparer);
 
             data[index] = value;
+            alreadySorted = false;
         }
     }
 
-    public void Add(T element) => data.Add(element);
+    public void Add(T element)
+    {
+        data.Add(element);
+        alreadySorted = false;
+    }
 
-    public void Remove(T element) => data.Remove(element);
+    public void Remove(T element)
+    {
+        data.Remove(element);
+        alreadySorted = false;
+    }
 
     public void Contains(T element) => data.Contains(element);
 }
