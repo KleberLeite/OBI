@@ -39,3 +39,7 @@ path = "src/bin/2021/minmax.rs"
 [[bin]]
 name = "palindrome_list"
 path = "src/bin/2021/palindrome_list.rs"
+
+[[bin]]
+name = "anagram"
+path = "src/bin/2021/anagram.rs"
