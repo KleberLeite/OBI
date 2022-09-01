@@ -24,11 +24,7 @@ public static class Sandwich
             int b = Math.Max(ab[0], ab[1]);
 
             if (!mValues.ContainsKey(a))
-            {
-                var list = new List<int>();
-                list.Add(b);
-                mValues.Add(a, list);
-            }
+                mValues.Add(a, new List<int> { b });
             else
                 mValues[a].Add(b);
         }
