@@ -29,7 +29,7 @@ public static class Sandwich
                 mValues[a].Add(b);
         }
 
-        if (m == Combinatorie(n, 2))
+        if (m == Factorial(n - 2) / 2)
         {
             Console.WriteLine(n);
             return;
@@ -40,8 +40,6 @@ public static class Sandwich
 
         Console.WriteLine($"end: {Count + n}");
     }
-
-    private static int Combinatorie(int a, int b) => Factorial(a) / (Factorial(b) * Factorial(a - b));
 
     private static int Factorial(int a)
     {
